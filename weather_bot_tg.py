@@ -13,8 +13,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+OWM_API_KEY = os.getenv("OWM_API_KEY")
+
 config_dict = get_default_config()
 config_dict['language'] = 'ru'
+
 owm = pyowm.OWM(OWM_API_KEY, config_dict)
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN, parse_mode=None)
 
