@@ -1,5 +1,6 @@
 import pyowm
 import telebot
+import os
 
 from pyowm.owm import OWM
 from pyowm.utils.config import get_default_config
@@ -8,11 +9,14 @@ from timezonefinder import TimezoneFinder
 from zoneinfo import ZoneInfo
 from datetime import datetime, timezone as dt_timezone
 from collections import Counter
+from dotenv import load_dotenv
 
+load_dotenv()
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 config_dict = get_default_config()
 config_dict['language'] = 'ru'
 owm = pyowm.OWM('OWM_API_KEY', config_dict)
-bot = telebot.TeleBot("TELEGRAM_BOT_TOKEN", parse_mode = None)
+bot = telebot.TeleBot(BOT_TOKEN, parse_mode=None)
 
 def global_weather(place):
     mgr = owm.weather_manager()
