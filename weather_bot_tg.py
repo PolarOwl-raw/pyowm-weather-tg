@@ -12,7 +12,7 @@ from collections import Counter
 from dotenv import load_dotenv
 
 load_dotenv()
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 config_dict = get_default_config()
 config_dict['language'] = 'ru'
 owm = pyowm.OWM('OWM_API_KEY', config_dict)
