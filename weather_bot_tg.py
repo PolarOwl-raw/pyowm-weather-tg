@@ -11,7 +11,7 @@ from datetime import datetime, timezone as dt_timezone
 from collections import Counter
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv("keys.env")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 OWM_API_KEY = os.getenv("OWM_API_KEY")
 
