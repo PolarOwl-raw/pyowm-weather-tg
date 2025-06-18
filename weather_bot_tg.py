@@ -11,8 +11,8 @@ from collections import Counter
 
 config_dict = get_default_config()
 config_dict['language'] = 'ru'
-owm = pyowm.OWM('3b0d228c001f3f8d063a108a3744cc2f', config_dict)
-bot = telebot.TeleBot("7659675157:AAHi7BfuX4bI1xtu4Buh1Q1YVxLSkUiwses", parse_mode = None)
+owm = pyowm.OWM('-------', config_dict)
+bot = telebot.TeleBot("----", parse_mode = None)
 
 def global_weather(place):
     mgr = owm.weather_manager()
